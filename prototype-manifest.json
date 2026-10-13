@@ -1,0 +1,46 @@
+{
+  "scenarios": [
+    {
+      "id": "IC-02",
+      "title": "Home water loss: request missing evidence",
+      "description": "A missing plumber report and a later document create a new package version and invalidate the earlier assessment.",
+      "screens": [
+        {
+          "id": "IC02-04-version-compare",
+          "image": "assets/scenarios/ic-02/screen-04.png",
+          "guideTask": "A new material document has arrived.",
+          "guideAction": "Review what changed, then click Revalidate",
+          "guideControl": "Revalidate changes",
+          "hotspots": [
+            {
+              "x": 78.2, 
+              "y": 88.0, 
+              "w": 13.4, 
+              "h": 5.2,
+              "label": "Revalidate changes", 
+              "next": "IC02-05-rule-pass",
+              "isNext": true
+            },
+            {
+              "x": 10.0,
+              "y": 10.0,
+              "w": 5.0,
+              "h": 5.0,
+              "label": "Back to Inbox",
+              "next": "IC02-01-inbox",
+              "isNext": false
+            }
+          ]
+        },
+        {
+          "id": "IC02-05-rule-pass",
+          "image": "assets/scenarios/ic-02/screen-05.png",
+          "guideTask": "Rule passes on v2.",
+          "guideAction": "Approve the reviewed coverage assessment",
+          "guideControl": "Approve",
+          "hotspots": []
+        }
+      ]
+    }
+  ]
+}

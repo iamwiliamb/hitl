@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Review Prototype</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div id="gallery-view" class="view-container active">
+        <header class="app-header">
+            <h1>Human Review Scenarios</h1>
+            <p>Select a scenario to begin. Synthetic prototype data is used throughout.</p>
+        </header>
+        <main class="scenario-grid" id="scenario-list"></main>
+    </div>
+
+    <div id="scenario-view" class="view-container">
+        <header class="scenario-header">
+            <div class="header-left">
+                <button class="nav-btn" id="btn-gallery">Exit to gallery</button>
+                <button class="nav-btn" id="btn-restart">Restart scenario</button>
+                <button class="nav-btn" id="btn-back">Back</button>
+            </div>
+            <div class="header-center">
+                <h2 id="scenario-title">Scenario Title</h2>
+                <span class="badge warning">Synthetic prototype data</span>
+            </div>
+            <div class="header-right">
+                <button class="nav-btn" id="btn-flow-map">Show flow map</button>
+            </div>
+        </header>
+
+        <div class="prototype-stage" id="prototype-stage">
+            <img id="screen-image" src="" alt="Prototype screen" />
+            <div id="hotspot-container"></div>
+            
+            <aside class="guide-panel" id="guide-panel">
+                <div class="guide-header">
+                    <h3>Prototype guide</h3>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="toggle-guide" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="guide-content">
+                    <p><strong>Current Task:</strong> <span id="guide-task"></span></p>
+                    <p><strong>Action:</strong> <span id="guide-action"></span></p>
+                    <p><strong>Click:</strong> <span id="guide-control"></span></p>
+                    <p class="progress-text"><span id="guide-progress"></span></p>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="dev-footer">
+            <label><input type="checkbox" id="toggle-dev-mode"> Developer Mode (Show all hotspots)</label>
+        </footer>
+    </div>
+    <script src="assets/app.js"></script>
+</body>
+</html>
